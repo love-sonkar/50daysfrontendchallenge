@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Navigation</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: rgb(231, 231, 231);
+    }
+
+    .nav {
+      cursor: pointer;
+      display: flex;
+      gap: 2rem;
+      padding: 20px 30px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 20px;
+      overflow: hidden;
+      transition: 0.8s ease-in;
+    }
+
+    .width {
+      width: 400px;
+    }
+
+    .nav ul {
+      opacity: 0;
+      font-size: 1.2rem;
+      transition: 0.8s ease-in;
+    }
+
+    .opacity {
+      transform: rotate3d(1, 1, 1, 360deg);
+      opacity: 1 !important;
+    }
+
+    .ham {
+      z-index: 20;
+      position: relative;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      right: 39px;
+      top: 0;
+      transition: 0.8s ease-in;
+    }
+
+    .hamani {
+      right: 33px;
+      top: 3px;
+    }
+
+    .line,
+    .line2 {
+      position: absolute;
+      top: 5px;
+      height: 2px;
+      width: 20px;
+      background: red;
+      transition: 0.8s ease-in;
+    }
+
+    .line2 {
+      top: 15px;
+    }
+
+    .rotate1 {
+      transform: rotate(45deg);
+    }
+
+    .rotate2 {
+      top: 5px;
+      transform: rotate(310deg);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <ul class="ul">
+          Home
+        </ul>
+        <ul class="ul">
+          About
+        </ul>
+        <ul class="ul">
+          Service
+        </ul>
+        <ul class="ul">
+          Contact
+        </ul>
+      </nav>
+      <div class="ham">
+        <div class="line"></div>
+        <div class="line2"></div>
+      </div>
+    </div>
+
+    <script>
+      const ham = document.querySelector(".ham");
+      const line1 = document.querySelector(".line");
+      const line2 = document.querySelector(".line2");
+      const nav = document.querySelector(".nav");
+      const ul = document.querySelectorAll(".ul");
+      ham.addEventListener("click", () => {
+        line1.classList.toggle("rotate1");
+        line2.classList.toggle("rotate2");
+        ham.classList.toggle("hamani");
+        nav.classList.toggle("width");
+        ul.forEach((element) => {
+          element.classList.toggle("opacity");
+        });
+      });
+    </script>
+  </body>
+</html>
