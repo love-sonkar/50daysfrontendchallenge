@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Write Effect</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Work Sans", sans-serif;
+    }
+
+    :root {
+      --maincolor: rgb(76 132 169);
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      background: rgb(235, 235, 235);
+    }
+
+    .text {
+      font-size: 1.8rem;
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    }
+
+    .speed {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid var(--maincolor);
+      box-shadow: 2px 2px 2px #000000;
+    }
+    .speed button {
+      cursor: pointer;
+      padding: 10px;
+      font-size: 1.5rem;
+      background: var(--maincolor);
+      border: none;
+      color: white;
+    }
+
+    .speed .speedshow {
+      padding: 10px;
+      font-size: 1.5rem;
+    }
+
+    .span {
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="text"></div>
+      <div>
+        <h4 class="span">Speedometer</h4>
+        <div class="speed">
+          <button class="decrement">-</button>
+          <h1 class="speedshow">1</h1>
+          <button class="increment">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const text = document.querySelector(".text");
+      let textarray = "Hi i'm love sonkar";
+      let index = 0;
+
+      let speed = 1;
+      let speedtext = document.querySelector(".speedshow");
+
+      document.querySelector(".decrement").addEventListener("click", () => {
+        if (speed > 1) {
+          speed--;
+        } else {
+          speed = 1;
+        }
+        speedtext.innerText = speed;
+      });
+
+      document.querySelector(".increment").addEventListener("click", () => {
+        if (speed < 10) {
+          speed++;
+        } else {
+          speed = 10;
+        }
+        speedtext.innerText = speed;
+      });
+
+      function writetext() {
+        text.innerText = textarray.slice(0, index);
+        index++;
+        if (index > textarray.length) {
+          index = 1;
+        }
+        setTimeout(writetext, `${300 / speed}`);
+      }
+
+      writetext();
+    </script>
+  </body>
+</html>
