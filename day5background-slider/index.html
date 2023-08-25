@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background-Slider</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "PT Sans", sans-serif;
+    }
+
+    .container {
+      height: 100vh;
+      background-color: rgb(233, 233, 233);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .image-div {
+      height: 80%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .img-container {
+      height: 80%;
+      width: 60%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .img-container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .ani {
+      animation: showhide 0.3s ease-in;
+    }
+
+    @keyframes showhide {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container button {
+      cursor: pointer;
+      padding: 5px 15px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      border: none;
+      background-color: rgb(92, 182, 255);
+      border-radius: 5px;
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    .buttonani {
+      animation: clickanimation 0.3s ease-in;
+    }
+
+    @keyframes clickanimation {
+      0%,
+      100% {
+        scale: 1;
+      }
+      50% {
+        scale: 0.9;
+      }
+    }
+
+    .container p {
+      font-size: 1.6rem;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="image-div">
+        <button class="left-button"><</button>
+        <div class="img-container">
+          <img class="image" src="" alt="images" />
+        </div>
+        <button class="right-button">></button>
+      </div>
+      <p>Image Slider By Love Sonkar</p>
+    </div>
+
+    <script>
+      const ImageArray = [
+        "https://images.unsplash.com/photo-1691832566409-b2d9705c822a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1683009427666-340595e57e43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1682685797507-d44d838b0ac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60",
+        "https://plus.unsplash.com/premium_photo-1690574169344-48f431816db6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1682685797741-f0213d24418c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1682687218147-9806132dc697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw1OHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1666427619107-01b046609a05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60",
+      ];
+      let id = 0;
+      let ImageLenght = ImageArray.length - 1;
+
+      function setImageSrc(num) {
+        const Imagesrc = document.querySelector(".image");
+        Imagesrc.setAttribute("src", ImageArray[`${num}`]);
+        Imagesrc.classList.add("ani");
+        setTimeout(function () {
+          Imagesrc.classList.remove("ani");
+        }, 300);
+      }
+      setImageSrc(id);
+
+      const leftbutton = document.querySelector(".left-button");
+      const rightbutton = document.querySelector(".right-button");
+
+      eventlistner(leftbutton);
+      eventlistner(rightbutton);
+
+      function eventlistner(path) {
+        path.addEventListener("click", () => {
+          if (path == leftbutton) {
+            id--;
+            if (id < 0) {
+              id = ImageLenght;
+            }
+
+            setImageSrc(id);
+          }
+          if (path == rightbutton) {
+            id++;
+            if (id > ImageLenght) {
+              id = 0;
+            }
+            setImageSrc(id);
+          }
+
+          path.classList.add("buttonani");
+
+          setTimeout(function () {
+            path.classList.remove("buttonani");
+          }, 300);
+        });
+      }
+    </script>
+  </body>
+</html>
