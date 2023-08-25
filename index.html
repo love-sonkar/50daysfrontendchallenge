@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>50 Days Frontend-Challenge</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "PT Sans", sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 15px 10px;
+      background-color: rgb(240, 236, 0);
+      color: rgb(255, 255, 255);
+    }
+    .logo {
+      font-size: 1.8rem;
+    }
+
+    .main-section {
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+    }
+
+    .select-button {
+      flex: 0.9;
+      padding: 10px 10px;
+      cursor: pointer;
+    }
+
+    .select-button option:hover {
+      cursor: grab;
+    }
+
+    .btn {
+      flex: 0.1;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <header>
+      <div class="logo">Love sonkar</div>
+    </header>
+    <main class="main-section">
+      <select name="" id="" class="select-button">
+        <option selected value="/1day3dboxes/index.html">3D-Boxes</option>
+        <option value="/day2Animatedcountdown/index.html">
+          Animated-countdown
+        </option>
+        <option value="/day3AnimatedNavigation/index.html">
+          Animated-Navigation
+        </option>
+        <option value="/day4writetexteffect/index.html">
+          Write-Text-Effect
+        </option>
+        <option value="/day5background-slider/index.html">
+          Background-Slider
+        </option>
+      </select>
+      <button class="btn">Go</button>
+    </main>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      const select = document.querySelector(".select-button");
+      let baseUrl = "/50dayschallenge";
+      btn.addEventListener("click", () => {
+        window.location = `${baseUrl}${select.value}`;
+      });
+    </script>
+  </body>
+</html>
