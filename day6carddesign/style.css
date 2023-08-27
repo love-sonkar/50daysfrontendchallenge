@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.main {
+  height: 100dvh;
+  background-color: rgb(233, 233, 233);
+  display: grid;
+  place-content: center;
+  padding: 0 20px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in;
+}
+
+.card-header {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-header img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-body {
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-body .title {
+  font-size: 1.2rem;
+}
+
+.card-body .para {
+  font-size: 0.8rem;
+}
+
+.ani {
+  animation: opacityanimation 1s ease-in;
+}
+
+@keyframes opacityanimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
