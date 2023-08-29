@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Animation</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --heartColor: red;
+    }
+
+    .main {
+      height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 80vw;
+      margin: 0 auto;
+      aspect-ratio: calc(16 / 9);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -10;
+    }
+
+    .heart {
+      position: relative;
+      background: var(--heartColor);
+      transform: rotate(-45deg);
+      margin: 3rem;
+      animation: ani 1s ease infinite;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      background-color: var(--heartColor);
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+    }
+    .heart:before {
+      left: 0;
+      top: -50%;
+    }
+    .heart:after {
+      left: 50%;
+    }
+
+    @keyframes ani {
+      0%,
+      100% {
+        height: 100px;
+        width: 100px;
+      }
+      50% {
+        width: 0;
+        height: 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="main">
+      <a class="card">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1692660491259-5b05d6d91304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+          alt=""
+        />
+        <div class="heart"></div>
+      </a>
+    </div>
+    <script>
+      const card = document.querySelector(".card");
+
+      card.addEventListener("click", (e) => {
+        let clientX = e.clientX;
+        let clientY = e.clientY;
+        let offsetLeft = e.target.offsetLeft;
+        let offsetTop = e.target.offsetTop;
+
+        let x = clientX - offsetLeft;
+        let y = clientY - offsetTop;
+
+        let span = document.createElement("span");
+        card.appendChild(span);
+
+        // span.classList.add("heart");
+      });
+    </script>
+  </body>
+</html>
