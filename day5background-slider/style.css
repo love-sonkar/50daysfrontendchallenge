@@ -19,17 +19,18 @@
 }
 
 .image-div {
-  height: 80%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding: 10px;
 }
 
 .img-container {
-  height: 80%;
-  width: 60%;
+  aspect-ratio: calc(16 / 9);
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
