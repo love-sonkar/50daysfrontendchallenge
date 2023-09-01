@@ -24,6 +24,7 @@
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  user-select: none;
 }
 
 .card-header {
@@ -47,6 +48,7 @@
   position: relative;
   opacity: 0;
   transition: all 1s;
+  background-color: rgb(240, 240, 240);
 }
 
 .card-body .card-bodyinner {
@@ -58,16 +60,22 @@
   display: flex;
 }
 
-.card-footer p {
+.card-footer a {
   text-align: center;
   flex: 1;
   padding: 10px;
   background-color: rgb(233, 233, 233);
   transition: 0.5s ease-in;
+  text-decoration: none;
 }
 
-.card-footer p:hover {
-  background-color: red;
+.card-footer a:hover {
+  background-color: rgb(184, 184, 184);
+}
+
+.card-footer a img {
+  object-fit: cover;
+  width: 30%;
 }
 
 .card:hover .card-body {
