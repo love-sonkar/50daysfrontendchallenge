@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+:root {
+  --mainbgcolor: rgb(240, 240, 240);
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.main {
+  background: var(--mainbgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.modal {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.modal-active {
+  display: flex;
+}
+
+.modal-body {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 60vw;
+}
+
+.modal-body-active {
+  animation: showanimation 1s ease-in-out;
+}
+
+.modal-body-active-hide {
+  animation: hideanimation 1s ease-in-out;
+}
+
+@keyframes showanimation {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes showanimation {
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 0;
+    opacity: 0;
+  }
+}
+
+.modal-heading p {
+  font-size: 1.3rem;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+.modal-footer button {
+}
+
+.modal-footer button:nth-child(2) {
+  margin: 0 15px;
+}
+
+@media (max-width: 769px) {
+  .modal-body {
+    max-width: 100%;
+  }
+
+  .modal-heading p {
+    width: auto;
+  }
+}

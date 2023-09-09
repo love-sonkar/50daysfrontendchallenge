@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+:root {
+  --mainbgcolor: rgb(240, 240, 240);
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.main {
+  background: var(--mainbgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.container {
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  padding: 0 30px;
+}
+
+.container div {
+  height: 100%;
+  width: 20%;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.container div img {
+  cursor: pointer;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container div:hover {
+  width: 100%;
+}
