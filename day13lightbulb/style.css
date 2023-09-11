@@ -6,7 +6,7 @@
 }
 
 :root {
-  --mainbgcolor: rgb(240, 240, 240);
+  --mainbgcolor: rgb(255, 255, 255);
 }
 
 .main {
@@ -52,7 +52,7 @@
 button {
   cursor: pointer;
   padding: 10px 30px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: rgb(185, 185, 39);
   color: rgb(255, 255, 255);
   border: none;
