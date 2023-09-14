@@ -51,11 +51,7 @@ button {
 }
 
 .modal-body-active {
-  animation: showanimation 1s ease-in-out;
-}
-
-.modal-body-active-hide {
-  animation: hideanimation 1s ease-in-out;
+  animation: showanimation 0.3s ease-in-out;
 }
 
 @keyframes showanimation {
@@ -66,17 +62,6 @@ button {
   to {
     scale: 1;
     opacity: 1;
-  }
-}
-
-@keyframes showanimation {
-  from {
-    scale: 1;
-    opacity: 1;
-  }
-  to {
-    scale: 0;
-    opacity: 0;
   }
 }
 
@@ -84,9 +69,6 @@ button {
   font-size: 1.3rem;
   width: 60%;
   word-wrap: break-word;
-}
-
-.modal-footer button {
 }
 
 .modal-footer button:nth-child(2) {
