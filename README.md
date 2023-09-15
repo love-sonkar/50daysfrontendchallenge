@@ -1,4 +1,4 @@
-#website link <a href="https://love-sonkar.github.io/50daysfrontendchallenge/" target="_Blank">Click Here</a>
+# website link <a href="https://love-sonkar.github.io/50daysfrontendchallenge/" target="_Blank">Click Here</a>
 
 # Summary of daily Practice done by me.
 
