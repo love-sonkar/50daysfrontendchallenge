@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+:root {
+  --mainbgcolor: rgb(240, 240, 240);
+  --buttonbg: rgb(37, 135, 192);
+}
+
+.main {
+  background: var(--mainbgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: 2px solid rgb(37, 135, 192);
+  font-size: 1.8rem;
+  color: var(--buttonbg);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  z-index: 10;
+  transition: 0.3s ease-in;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: red;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(255, 0, 221);
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+button:hover {
+  color: var(--mainbgcolor);
+}
+
+button:hover::after,
+button:hover::before {
+  width: 50%;
+}
