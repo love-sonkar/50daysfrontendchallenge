@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+
+:root {
+  --mainbgcolor: #227093;
+}
+
+.main {
+  background: var(--mainbgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  gap: 2rem;
+}
+
+.readmore_card {
+  width: 320px;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: none;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.readme_header {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.readme_header img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.readme_body {
+  padding: 10px;
+}
+
+.readme_body h1 {
+  font-size: 1.6rem;
+  padding-bottom: 5px;
+}
+.border {
+  height: 6px;
+  width: 60%;
+  background: rgb(179, 57, 57);
+  border-radius: 50px;
+  margin: 6px 0;
+}
+
+.readme_body p {
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  background-color: #b33939;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  border-top: 1px solid #b33939;
+}
+
+.button:hover {
+  color: black;
+  background-color: transparent;
+}
