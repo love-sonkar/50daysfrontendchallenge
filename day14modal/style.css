@@ -51,17 +51,15 @@ button {
 }
 
 .modal-body-active {
-  animation: showanimation 0.3s ease-in-out;
+  animation: showanimation 0.3s ease-in;
 }
 
 @keyframes showanimation {
   from {
     scale: 0;
-    opacity: 0;
   }
   to {
     scale: 1;
-    opacity: 1;
   }
 }
 
