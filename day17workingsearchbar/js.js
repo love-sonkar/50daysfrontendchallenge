@@ -28,20 +28,7 @@ const displaynewdata = (data) => {
   }
   const mapdata = data.map((item) => {
     const randomNumber = Math.floor(Math.random() * imageData.length);
-    const i = `<div class="card-item">
-<div class="profile">
-  <img
-    src="${imageData[randomNumber]}"
-    alt=""
-  />
-  </div>
-  <div class="detail">
-  <h2 class="heading">${item.name}</h2>
-  <p class="sub-heading">${item.email}</p>
-  <p class="address">${item.company.catchPhrase}</p>
-  </div>
-  </div>`;
-    return i;
+    return `<div class="card-item"><div class="profile"><img src="${imageData[randomNumber]}" alt="${item.name}" /></div><div class="detail"><h2 class="heading">${item.name}</h2><p class="sub-heading">${item.email}</p><p class="address">${item.company.catchPhrase}</p></div></div>`;
   });
   cardBody.innerHTML = mapdata;
 };
