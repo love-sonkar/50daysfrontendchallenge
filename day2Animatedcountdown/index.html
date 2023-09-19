@@ -4,127 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Animated Countdown</title>
   </head>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    }
-
-    :root {
-      --maincolor: rgb(45, 123, 187);
-    }
-
-    .maincontainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      background: rgb(231, 231, 231);
-    }
-
-    .button {
-      padding: 5px 10px;
-      border: 1px solid var(--maincolor);
-      background-color: var(--maincolor);
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      position: relative;
-      transition: all 0.3s ease-in-out;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
-
-    .button span {
-      display: flex;
-    }
-
-    .button span::after {
-      content: ">>";
-      position: absolute;
-      right: -20px;
-      transition: all 0.3s ease-in-out;
-      opacity: 0;
-    }
-    .button:hover {
-      padding-right: 29px;
-    }
-
-    .button:hover span::after {
-      right: 7px;
-      opacity: 1;
-    }
-
-    .box {
-      position: relative;
-      border: 1px solid red;
-      width: 100%;
-    }
-
-    .heading {
-      position: absolute;
-      font-size: 3rem;
-      height: 40px;
-      padding: 20px;
-      transform: translateY(250);
-      /* animation: loopanimation 5s infinite; */
-    }
-
-    @keyframes loopanimation {
-      from {
-        transform: rotate(360deg);
-      }
-
-      to {
-        transform: rotate(0deg);
-      }
-    }
-  </style>
   <body>
     <main class="maincontainer">
-      <div class="box">
-        <h1 class="heading">GO</h1>
-      </div>
+      <h1 class="heading">GO</h1>
       <button class="button">
         <span> Click Me </span>
       </button>
       <h1 class="getready"></h1>
     </main>
-
-    <script>
-      let intervalconst;
-      let i = 4;
-      let heading = document.querySelector(".heading");
-
-      const clearfunction = () => {
-        setTimeout(() => {
-          clearInterval(intervalconst);
-          i = 4;
-          heading.innerText = "GO";
-          getready.innerText = "";
-          button.style.display = "block";
-        }, 5000);
-      };
-      const getready = document.querySelector(".getready");
-      const button = document.querySelector(".button");
-
-      button.addEventListener("click", () => {
-        getready.innerText = "Let's Go";
-        button.style.display = "none";
-
-        intervalconst = setInterval(() => {
-          i--;
-          heading.innerText = i;
-        }, 1000);
-
-        clearfunction();
-      });
-    </script>
+    <script src="js.js"></script>
   </body>
 </html>

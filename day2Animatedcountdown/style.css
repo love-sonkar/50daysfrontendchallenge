@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --maincolor: rgb(45, 123, 187);
+}
+
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: rgb(231, 231, 231);
+}
+
+.button {
+  padding: 5px 10px;
+  border: 1px solid var(--maincolor);
+  background-color: var(--maincolor);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.button span {
+  display: flex;
+}
+
+.button span::after {
+  content: ">>";
+  position: absolute;
+  right: -20px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.button:hover {
+  padding-right: 29px;
+}
+
+.button:hover span::after {
+  right: 7px;
+  opacity: 1;
+}
+
+.heading {
+  font-size: 3rem;
+}
+
+@keyframes loopanimation {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
