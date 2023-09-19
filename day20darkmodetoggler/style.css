@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+
+:root {
+  --light: #dee4e7;
+  --dark:#37474f;
+  --transition:.6s ease-in-out;
+}
+
+.main {
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100dvh;
+  gap: 2rem;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.toggle{
+  height: 50px;
+  width: 190px;
+  padding:0 6px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  background-color: var(--dark);
+  transition: var(--transition);
+}
+
+.toggle span{
+  font-size: 2.5rem;
+}
+
+.toggle .light{
+  color: var(--dark);
+  transition: var(--transition);
+}
+
+.toggle span:nth-child(2){
+  color: var(--light);
+}
+
+.round{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  transition: var(--transition);
+  background-color: #144862;
+  background-color: var(--light);
+}
+
+.active{
+  background-color: var(--dark);
+  transform: translateX(137px);
+
+}
+
+
+.darkmode{
+  background-color: var(--dark);
+}
+
+.lightmode{
+  background-color: var(--light);
+}
