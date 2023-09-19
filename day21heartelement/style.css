@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --heartColor: red;
+}
+
+.main {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  background-color: rgb(243 243 243);
+}
+
+.heart {
+  position: absolute;
+  background:#ff0000;
+  transform: rotate(-45deg);
+  height: 200px;
+  width: 200px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  background-color:#ff0000;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.heart:before {
+  left: 0;
+  top: -50%;
+}
+.heart:after {
+  left: 50%;
+}
