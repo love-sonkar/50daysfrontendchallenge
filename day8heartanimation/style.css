@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --heartColor: red;
+  }
+
+  .main {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  .card {
+    cursor: pointer;
+    width: 80vw;
+    margin: 0 auto;
+    aspect-ratio: calc(16 / 9);
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -10;
+  }
+
+  span {
+    position: absolute;
+    background: var(--heartColor);
+    transform: rotate(-45deg);
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    animation: ani .3s ease-in;
+  }
+  span:before,
+  span:after {
+    content: "";
+    position: absolute;
+    background-color: var(--heartColor);
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+  }
+  span:before {
+    left: 0;
+    top: -50%;
+  }
+  span:after {
+    left: 50%;
+  }
+
+  @keyframes ani {
+   from{
+    scale: 0;
+   }to{
+    scale: 1;
+   }
+  }
