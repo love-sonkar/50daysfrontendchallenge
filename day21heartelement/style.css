@@ -24,6 +24,7 @@
   height: 200px;
   width: 200px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  animation: heartAnimation .9s ease-in-out infinite;
 }
 
 .heart:before,
@@ -42,4 +43,13 @@
 }
 .heart:after {
   left: 50%;
+}
+
+
+@keyframes heartAnimation {
+  0%,100%{
+    scale: .9;
+  }50%{
+    scale: 1.1;
+  }
 }
