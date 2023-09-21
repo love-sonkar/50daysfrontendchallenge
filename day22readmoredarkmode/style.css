@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+:root {
+  --transition: 0.3s ease-in;
+}
+
+[data-theme="light"] {
+  --mainbgcolor: #227093;
+  --bgred: #b33939;
+  --textdark: #000000;
+  --bgdark: #ffffff;
+  --texthover: black;
+}
+
+[data-theme="dark"] {
+  --mainbgcolor: #253e48;
+  --bgred: #7c2929;
+  --textdark: #e5e5e5;
+  --bgdark: #3e3e3e;
+  --texthover: white;
+}
+
+.main {
+  background: var(--mainbgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100dvh;
+  gap: 2rem;
+  transition: var(--transition);
+}
+
+.readmore_card {
+  width: 320px;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: none;
+  gap: 1rem;
+  color: var(--textdark);
+  background-color: var(--bgdark);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  transition: var(--transition);
+}
+
+.readme_header {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.readme_header img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.readme_body {
+  padding: 10px;
+}
+
+.readme_body h1 {
+  font-size: 1.6rem;
+  padding-bottom: 5px;
+}
+.border {
+  height: 6px;
+  width: 60%;
+  background: var(--bgred);
+  border-radius: 50px;
+  margin: 6px 0;
+}
+
+.readme_body p {
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  background-color: var(--bgred);
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+  transition: var(--transition);
+  border-top: 1px solid var(--bgred);
+}
+
+.button:hover {
+  color: var(--texthover);
+  background-color: transparent;
+}
+
+.theme {
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: var(--bgred);
+  transition: var(--transition);
+}
