@@ -26,11 +26,21 @@ const imgtag = document.querySelector(".imagesrc");
 imgtag.setAttribute("src", imageList[0].value);
 
 const getli = document.getElementsByTagName("li");
+const H1Tag = document.querySelectorAll("h1");
 
 [...getli].map((item) => {
   item.addEventListener("click", () => {
+    RemoveActiveClass();
     const datavalue = item.getAttribute("data-value");
-    const imagevalue = imageList.filter((src)=>src.name === datavalue && src );
-    imgtag.setAttribute("src",imagevalue[0].value)
+    const imagevalue = imageList.filter((src) => src.name === datavalue && src);
+    imgtag.setAttribute("src", imagevalue[0].value);
+    const GetElement = item.getElementsByTagName("h1")[0];
+    GetElement.classList.add("active");
+  });
 });
-});
+
+function RemoveActiveClass() {
+  [...H1Tag].forEach((item) => {
+    item.classList.remove("active");
+  });
+}

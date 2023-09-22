@@ -23,7 +23,7 @@
 
 .mobile {
   height: 80%;
-  width: 40%;
+  width: 33%;
   border-radius: 10px;
   border: 3px solid var(--maincolor);
   display: flex;
@@ -66,13 +66,18 @@
   color: var(--uicolor);
 }
 
-.text {
+h1 {
+  font-size: 1rem;
   overflow: hidden;
   height: 0px;
   transition: 0.4s ease;
 }
 
-.tab li:hover .text {
+.tab li:hover h1 {
+  height: 100%;
+}
+
+.active{
   height: 100%;
 }
 
