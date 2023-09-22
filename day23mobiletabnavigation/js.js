@@ -5,7 +5,7 @@ const imageList = [
       "https://images.unsplash.com/photo-1600009710631-5baaaaf50754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvbWUlMjBwYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
   },
   {
-    name: "about",
+    name: "store",
     value:
       "https://plus.unsplash.com/premium_photo-1661602409016-19db4768fb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGhvbWUlMjBwYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
   },

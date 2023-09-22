@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --maincolor: #f3f3f3;
+  --uicolor: #fa983a;
 }
 
 .main {
@@ -10,18 +18,19 @@
   align-items: center;
   justify-content: center;
   user-select: none;
-  background-color: rgb(209, 209, 209);
+  background-color: #006266;
 }
 
 .mobile {
   height: 80%;
   width: 40%;
   border-radius: 10px;
-  border: 3px solid red;
+  border: 3px solid var(--maincolor);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
 }
 
 .image {
@@ -33,16 +42,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: .6s ease-in;
+  transition: 0.6s ease-in;
 }
 
 .tab {
   flex: 0.1;
-  background: red;
+  background: var(--maincolor);
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 0 10px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
@@ -53,8 +62,19 @@
   width: 100%;
   display: grid;
   place-content: center;
+  font-size: 1rem;
+  color: var(--uicolor);
 }
 
+.text {
+  overflow: hidden;
+  height: 0px;
+  transition: 0.4s ease;
+}
+
+.tab li:hover .text {
+  height: 100%;
+}
 
 @media (max-width: 768px) {
   .mobile {
