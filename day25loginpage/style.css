@@ -8,42 +8,134 @@
 }
 
 :root {
-  --leftcolor: #10ac84;
+  --mainColor: #10ac84;
 }
 
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   height: 100dvh;
 }
+
+.logo {
+  top:10px;
+  left: 10px;
+  position: absolute;
+  z-index: 1;
+  font-size: 1.4rem;
+  color: white;
+}
+
 .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 0.5;
+display: grid;
+place-content: center;
+  text-align: center;
+  flex: 1;
   height: 100%;
+  width: 100%;
   gap: 1rem;
   padding: 15px;
   color: white;
-  background: var(--leftcolor);
-  text-align: left;
-}
-
-.left .logo {
-  font-size: 1.4rem;
-  
-}
-
-.left .content {
-  height: 100%;
+  background: var(--mainColor);
 }
 
 .right {
   display: grid;
   place-content: center;
-  flex: 0.5;
+  flex: 1;
   height: 100%;
   gap: 1rem;
+}
+
+.form{
+display: flex;
+flex-direction: column;
+gap: 1rem;
+max-width: 350px;
+padding: 0 20px;
+}
+
+.form h2{
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--mainColor)
+}
+
+.form h3{
+  font-size: .8rem;
+  text-align: center;
+  color:#7c7c7c;
+}
+
+.form .icons{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form .icons .image{
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.form .icons img{
+  width:100%;
+  object-fit: cover;
+}
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: #e7e7e7;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.item label{
+  color:#7c7c7c;
+}
+
+.item input{
+  background: transparent;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  height: 100%;
+}
+
+.item input::placeholder{
+  color:#7c7c7c;
+}
+
+.form button{
+  align-self: center;
+  cursor: pointer;
+  width: 60%;
+  padding: 10px;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
+  font-size:1.2rem;
+  color: white;
+  margin-top: 10px;
+  }
+
+  .form button:hover{
+    background: transparent;
+    color: var(--mainColor);
+  }
+
+@media (max-width:768px) {
+  .main{
+    flex-direction: column;
+  }
 }
