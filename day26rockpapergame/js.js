@@ -8,6 +8,7 @@ const button = document.querySelectorAll(".btn");
 let userCounter = 0;
 let coumputerCounter = 0;
 function PrintResult(comp, user) {
+  console.log(comp, user);
   Cresult.innerText = comp;
   Uresult.innerText = user;
 }
@@ -26,29 +27,28 @@ button.forEach((item) => {
     } else if (Options[checkoption] === "rock") {
       if (value === "scissors") {
         result.innerText = "You Lost..!";
-        PrintResult(coumputerCounter++, userCounter);
+        PrintResult(++coumputerCounter, userCounter);
       } else {
         result.innerText = "You won..!";
-        userCounter++
-        PrintResult(coumputerCounter, userCounter);
+        PrintResult(coumputerCounter, ++userCounter);
       }
     } else if (Options[checkoption] === "paper") {
-      if (value === "scissors") {
-        result.innerText = "You Won..!";
-        PrintResult(coumputerCounter, userCounter++);
-      } else {
+      if (value === "rock") {
         result.innerText = "You Lost..!";
-        PrintResult(coumputerCounter++, userCounter);
+        PrintResult(++coumputerCounter, userCounter);
+      } else {
+        result.innerText = "You won..!";
+        PrintResult(coumputerCounter, ++userCounter);
       }
     } else if (Options[checkoption] === "scissors") {
       if (value === "paper") {
         result.innerText = "You Lost..!";
-        PrintResult(coumputerCounter++, userCounter);
+        PrintResult(++coumputerCounter, userCounter);
       } else {
         result.innerText = "You Won..!";
-        PrintResult(coumputerCounter, userCounter++);
+        PrintResult(coumputerCounter, ++userCounter);
       }
-    }
+     }
     yourchoice.innerText = value;
   });
 });
