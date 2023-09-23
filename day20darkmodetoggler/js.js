@@ -1,12 +1,13 @@
-const main = document.querySelector('.main');
-const dark_toggle =document.querySelector(".dark_toggle")
+const dark_toggle = document.querySelector(".dark_toggle");
 const round_toggle = document.querySelector(".round");
-const toggle =document.querySelector(".toggle")
+const body = document.querySelector(".body");
 
-
-dark_toggle.addEventListener("click",()=>{
-round_toggle.classList.toggle("active")
-main.classList.toggle("darkmode")
-toggle.classList.toggle("lightmode")
-})
-
+dark_toggle.addEventListener("click", () => {
+  round_toggle.classList.toggle("active");
+  const data = body.getAttribute("data-theme");
+  if (data === "light") {
+    body.setAttribute("data-theme", "dark");
+  } else {
+    body.setAttribute("data-theme", "light");
+  }
+});

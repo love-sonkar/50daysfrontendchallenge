@@ -7,14 +7,24 @@
   font-family: "Mooli", sans-serif;
 }
 
+
 :root {
-  --light: #dee4e7;
-  --dark:#37474f;
   --transition:.6s ease-in-out;
 }
 
+[data-theme="dark"]{
+  --color:#37474f;
+  --oppositcolor:#dee4e7;
+}
+
+[data-theme="light"]{
+  --color:#dee4e7;
+  --oppositcolor:#37474f;
+
+}
+
 .main {
-  background: var(--light);
+  background: var(--color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +46,7 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-  background-color: var(--dark);
+  background-color: var(--oppositcolor);
   transition: var(--transition);
 }
 
@@ -45,12 +55,12 @@
 }
 
 .toggle .light{
-  color: var(--dark);
+  color: var(--color);
   transition: var(--transition);
 }
 
 .toggle span:nth-child(2){
-  color: var(--light);
+  color: var(--color);
 }
 
 .round{
@@ -60,20 +70,9 @@
   border-radius: 50px;
   transition: var(--transition);
   background-color: #144862;
-  background-color: var(--light);
+  background-color: var(--color);
 }
 
-.active{
-  background-color: var(--dark);
+ .active{
   transform: translateX(137px);
-
-}
-
-
-.darkmode{
-  background-color: var(--dark);
-}
-
-.lightmode{
-  background-color: var(--light);
 }
