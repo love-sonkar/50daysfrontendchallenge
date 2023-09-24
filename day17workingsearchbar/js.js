@@ -26,9 +26,18 @@ const displaynewdata = (data) => {
   if (data.length == 0) {
     return (cardBody.innerHTML = `<h2 class="msg">No User Found</h2>`);
   }
-  const mapdata = data.forEach((item) => {
+  const mapdata = data.map((item) => {
+
     const randomNumber = Math.floor(Math.random() * imageData.length);
-    return `<div class="card-item"><div class="profile"><img src="${imageData[randomNumber]}" alt="${item.name}" /></div><div class="detail"><h2 class="heading">${item.name}</h2><p class="sub-heading">${item.email}</p><p class="address">${item.company.catchPhrase}</p></div></div>`;
+    return ` <div class="card-item"><div class="profile">
+    <img src="${imageData[randomNumber]}" alt="${item.name}" />
+    </div>
+    <div class="detail">
+    <h2 class="heading">${item.name}</h2>
+    <p class="sub-heading">${item.email}</p>
+    <p class="address">${item.company.catchPhrase}</p>
+    </div>
+    </div>`
   });
   cardBody.innerHTML = mapdata;
 };

@@ -11,13 +11,20 @@
   --mainColor: #10ac84;
 }
 
+.grid{
+  display: grid;
+  place-content: center;
+}
+
 .mainheading{
   padding: 80px 10px;
+  padding-bottom: 30px;
   font-size: 1.3rem;
   text-align: center;
 }
 
 .counter{
+  gap: 3rem;
   display: flex;
   padding: 20px 20px;
   align-items: center;
