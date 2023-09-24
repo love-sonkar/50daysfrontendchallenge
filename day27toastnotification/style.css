@@ -20,26 +20,26 @@
   gap: 2rem;
 }
 
-button{
+button {
   cursor: pointer;
   padding: 20px 20px;
   color: var(--mainbgcolor);
   background-color: white;
   font-size: 1.6rem;
   font-weight: bold;
-  outline:none;
+  outline: none;
   border: none;
   border-radius: 5px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.btn:active{
-  scale: .8;
+.btn:active {
+  scale: 0.8;
 }
 
-.toast{
+.toast {
   position: fixed;
-  top:10px;
+  top: 10px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -49,23 +49,35 @@ button{
   gap: 10px;
 }
 
-.cover{
+.cover {
   padding: 10px 15px;
   background-color: white;
   border-radius: 5px;
   text-align: center;
   font-size: 1.2rem;
+  animation: scale .3s ease-in-out;
+  text-transform: capitalize;
 }
 
-
-.success{
-color: green;
+@keyframes scale {
+  from{
+    scale: 0;
+  }to{
+    scale: 1;
+  }
 }
 
-.error{
-  color:red;
+.success {
+  border: 1px solid green;
+  color: green;
 }
 
-.alert{
-  color:yellow;
+.error {
+  color: red;
+  border: 1px solid red;
+}
+
+.alert {
+  color: #d7d700;
+  border: 1px solid #d7d700;
 }
