@@ -1,13 +1,21 @@
 const btn = document.querySelector(".btn");
-const joke = document.querySelector(".joke");
+const joketag = document.querySelector(".joke");
 
-const jokes = ["success", "error", "alert"];
+btn.addEventListener("click", GenerateJokes());
 
+async function GenerateJokes() {
+  try {
+    btn.setAttribute("disabled",true)
+    const res = await fetch("https://icanhazdadjoke.com");
+    const data = await res.json();
+    joketag.innerText = data.joke;
+    btn.setAttribute("disabled",false)
 
-const RandomNumber=()=>{
-return Math.floor(Math.random()*jokes.length)
+  } catch (error) {
+    console.log(error);
+  }
+  btn.setAttribute("disabled",false)
+
 }
 
-btn.addEventListener('click',()=>{
-  joke.innerText = jokes[RandomNumber()]
-})
+GenerateJokes();
