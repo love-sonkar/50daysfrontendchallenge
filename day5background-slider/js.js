@@ -43,11 +43,5 @@ function eventlistner(path) {
       }
       setImageSrc(id);
     }
-
-    path.classList.add("buttonani");
-
-    setTimeout(function () {
-      path.classList.remove("buttonani");
-    }, 300);
   });
 }
