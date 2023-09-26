@@ -4,14 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Feedback</title>
   </head>
   <body>
     <div class="main">
       <div class="card">
-        <h2>How Satisfied You With My Content</h2>
-        
+        <h2 class="heading_tag">How Satisfied You With My Content</h2>
+        <div class="choice">
+          <div class="inner_div" data-value="Happy">
+            <span class="material-symbols-outlined"> sentiment_satisfied </span>
+            Happy
+          </div>
+          <div class="inner_div" data-value="Not">
+            <span class="material-symbols-outlined">
+              sentiment_dissatisfied
+              </span>
+            Not Happy
+          </div>
+          <div class="inner_div" data-value="Bad">
+            <span class="material-symbols-outlined">
+              sentiment_extremely_dissatisfied
+            </span>
+            Very Bad
+          </div>
+        </div>
+        <h2 class="footer_tag">Please Help us to improve !</h2>
       </div>
     </div>
     <script src="js.js"></script>
