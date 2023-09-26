@@ -8,7 +8,8 @@
 }
 
 :root {
-  --mainbgcolor: #00b894;
+  --mainbgcolor: #353b48;
+  --gap: 1rem;
 }
 
 body {
@@ -16,43 +17,33 @@ body {
 }
 
 .main {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
   height: 100dvh;
   gap: 2rem;
 }
 
-.marquee {
+.marqueediv {
+  color: white;
   display: flex;
-  gap: var(--gap);
   overflow: hidden;
-  width: 100%;
-  user-select: none;
- 
+  gap: var(--gap);
 }
 
-.list{
-  user-select: none;
-  display: flex;
+.marqueediv .item {
   flex-shrink: 0;
- justify-content: space-around;
-  gap: 1rem;
-  animation: 10s linear .3s infinite normal forwards running righleft;
+  animation: marqueeani 60s 1s forwards linear infinite;
 }
 
-.marquee h2{
-  color:white;
+.marqueediv .item h2 {
+  font-size: 2.5rem;
 }
 
-
-@keyframes righleft {
-  0% {
-    transform: translateX(0px);
-}
-
-100% {
-    transform: translateX(calc(-100% - 1rem));}
+@keyframes marqueeani {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
 }
