@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+
+:root {
+  --mainbgcolor: #ffffff;
+}
+
+body {
+  background: var(--mainbgcolor);
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  place-content: center;
+  height: 100dvh;
+  gap: 2rem;
+}
+
+.parent {
+  display: flex;
+  gap: 1rem;
+}
+
+.parent img {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  object-fit: cover;
+  width: 50%;
+  height: 250px;
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+}
+
+
+.parent:hover > img:not(:hover){
+  opacity: .2;
+}
