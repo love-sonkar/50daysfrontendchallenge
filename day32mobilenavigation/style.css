@@ -9,6 +9,7 @@
 
 :root {
   --mainbgcolor: #ffffff;
+  --transition:.3s ease-out;
 }
 
 body {
@@ -55,27 +56,50 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 50vw;
+  width: 70vw;
   background-color: black;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  transition-delay: .6s;
+}
+
+
+.navigation.show{
+  transition-delay: 0s;
 }
 
 .nav2{
-  width: 45vw;
+  width: 65vw;
   background-color: red;
   top: 0;
   bottom: 0;
   left: 0;
   height: 100%;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  transition-delay: .3s;
+}
+
+.nav2.show{
+  transition-delay: .3s;
 }
 
 .nav{
-  width: 40vw;
+  width: 60vw;
   background-color: rgb(255, 255, 255);
   top: 0;
   bottom: 0;
   left: 0;
   height: 100%;
   position: relative;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  transition-delay:0s;
+}
+
+.nav.show{
+  transition-delay: .6s;
+  
 }
 
 .nav ul {
@@ -96,4 +120,8 @@ body {
   top: 10px;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.show{
+  transform: translateX(0);
 }
