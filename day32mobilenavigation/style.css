@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+
+:root {
+  --mainbgcolor: #ffffff;
+}
+
+body {
+  background: var(--mainbgcolor);
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  gap: 2rem;
+}
+
+.header{
+  padding: 10px;
+}
+
+.hammenu{
+  cursor: pointer;
+  user-select: none;
+  font-size: 2rem;
+}
+
+.content{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content span{
+  font-size: 4rem;
+}
+.content h1{
+  font-size: 1.5rem;
+}
+
+.navigation{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50vw;
+  background-color: black;
+}
+
+.nav2{
+  width: 45vw;
+  background-color: red;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+
+.nav{
+  width: 40vw;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  position: relative;
+}
+
+.nav ul {
+  display: grid;
+  place-content: center;
+  height: 100%;
+}
+
+.nav ul li {
+  list-style: none;
+  font-size: 2rem;
+  border-bottom: 3px solid red;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
