@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>50 Days Frontend-Challenge</title>
   </head>
-
   <style>
     @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
@@ -17,10 +16,14 @@
       font-family: "PT Sans", sans-serif;
     }
 
+    :root {
+      --maincolor: rgb(240, 236, 0);
+    }
+
     header {
       text-align: center;
       padding: 15px 10px;
-      background-color: rgb(240, 236, 0);
+      background-color: var(--maincolor);
       color: rgb(255, 255, 255);
     }
     .logo {
@@ -34,75 +37,71 @@
     }
 
     .select-button {
-      flex: 0.9;
-      padding: 10px 10px;
+      flex: 0.8 10px;
       cursor: pointer;
+      border: 1px solid var(--maincolor);
+      outline: none;
+      font-size: 1rem;
+      padding: 10px;
     }
 
-    .select-button option:hover {
-      cursor: grab;
+    select > option:checked {
+      background: var(--maincolor) !important;
+      color: white !important;
     }
 
     .btn {
-      flex: 0.1;
+      flex: 0.2;
       cursor: pointer;
+      background-color: var(--maincolor);
+      outline: none;
+      border: 1px solid var(--maincolor);
+      font-size: 1.4rem;
+      color: white;
+      border-radius: 0 10px 10px 0;
     }
   </style>
-
   <body>
     <header>
       <div class="logo">Love sonkar</div>
     </header>
     <main class="main-section">
       <select name="" id="" class="select-button">
-        <option selected value="/1day3dboxes/index.html">3D-Boxes</option>
-        <option value="/day2Animatedcountdown/index.html">
-          Animated-countdown
-        </option>
-        <option value="/day3AnimatedNavigation/index.html">
-          Animated-Navigation
-        </option>
-        <option value="/day4writetexteffect/index.html">
-          Write-Text-Effect
-        </option>
-        <option value="/day5background-slider/index.html">
-          Background-Slider
-        </option>
-        <option value="/day6carddesign/index.html">Card Design</option>
-        <option value="/day7loadingblureffect/index.html">
-          Loading-Blur-Effect
-        </option>
-	<option value="/day8heartanimation">Like Heart Animation</otion>
-        <option value="/day9cardhoveranimation/index.html">
-          Card-Hover-Animation
-        </option>
-        <option value="/day10imageHoverEffect/index.html">
-          ImageHover-Effect
-        </option>
-        <option value="/day11neonbutton/index.html">Neon Button</option>
-        <option value="/day12imagegallary/index.html">
-          Responsive Image Gallary
-        </option>
-        <option value="/day15imagehoveranimation/index.html">
-          Images hover Animation
-        </option>
-        <option value="/day13lightbulb/index.html">Light Bulb Effect</option>
-        <option value="/day14modal/index.html">Modal</option>
+        <option selected value="/1day3dboxes">3D-Boxes</option>
+        <option value="/day2Animatedcountdown">Animated-countdown</option>
+        <option value="/day3AnimatedNavigation">Animated-Navigation</option>
+        <option value="/day4writetexteffect">Write-Text-Effect</option>
+        <option value="/day5background-slider">Background-Slider</option>
+        <option value="/day6carddesign">Card Design</option>
+        <option value="/day7loadingblureffect">Loading-Blur-Effect</option>
+        <option value="/day8heartanimation">Like Heart Animation</option>
+        <option value="/day9cardhoveranimation">Card-Hover-Animation</option>
+        <option value="/day10imageHoverEffect">ImageHover-Effect</option>
+        <option value="/day11neonbutton">Neon Button</option>
+        <option value="/day12imagegallary">Responsive Image Gallary</option>
+        <option value="/day15imagehoveranimation">Images hover Animation</option>
+        <option value="/day13lightbulb">Light Bulb Effect</option>
+        <option value="/day14modal">Modal</option>
         <option value="/day16hiddensearchbox">Hidden SearchBox</option>
         <option value="/day17workingsearchbar">Working Searchbox</option>
-	<option value="/day18buttonhoveranimation">ButtonHoverAnimation</option>     
-	<option value="/day19readmore">Readme Card</option>
-	<option value="/day20darkmodetoggler">Dark Mode Toggler</option>
-<option value="/day21heartelement">Heart Element</option>
-	<option value="/day22readmoredarkmode">Readmore Dark Mode</option>
-<option value="/day23mobiletabnavigation">Mobile Tab Navigation</option>
-<option value="/day24splitpage">Split Page</option>
-<option value="/day25loginpage">Login Page</option>	
- </select>
-
+        <option value="/day18buttonhoveranimation">ButtonHoverAnimation</option>
+        <option value="/day19readmore">Readme Card</option>
+        <option value="/day20darkmodetoggler">Dark Mode Toggler</option>
+        <option value="/day21heartelement">Heart Element</option>
+        <option value="/day22readmoredarkmode">Readmore Dark Mode</option>
+        <option value="/day23mobiletabnavigation">Mobile Tab Navigation</option>
+        <option value="/day24splitpage">Split Page</option>
+        <option value="/day25loginpage">Login Page</option>
+        <option value="/day26rockpapergame">Rock Paper Scissors Game</option>
+        <option value="/day27toastnotification">Toast Notification</option>
+        <option value="/day28randomjokes">Random Jokes</option>
+        <option value="/day29feedback">User Feedback</option>
+        <option value="/day30marqueeanimation">Marquee Animation</option>
+        <option value="/day31nothover">Not Hover Animation</option>
+        <option value="day32mobilenavigation">Mobile Navigation</option>
+      </select>
       <button class="btn">Go</button>
     </main>
-
     <script>
       const btn = document.querySelector(".btn");
       const select = document.querySelector(".select-button");
