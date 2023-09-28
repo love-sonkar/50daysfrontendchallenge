@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+
+:root {
+  --background: rgb(229,9,20);
+  --backgroundHover:rgb(193,17,25);
+}
+
+
+.main{
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("/bg.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+
+}
+
+.maxwidth{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding:20px;
+}
+
+.header img{
+  width: 20%;
+  object-fit: cover;
+}
+
+button{
+  background-color: var(--background);
+  padding: 10px 20px;
+  color:white;
+  outline:none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: var(--backgroundHover);
+}
+
+.herosection{
+  display:grid;
+  place-content: center;
+  height: 80%;
+  color:white;
+  gap:1rem;
+}
+
+.email{
+  display: flex;
+  gap: 1rem;
+}
+
+.email input{
+  flex:1;
+  background-color: transparent;
+  border-radius: 5px;
+  border:1px solid rgb(155, 155, 155);
+  padding:10px;
+  font-size: 1.8rem;
+}
+
+.email input:checked
+{
+  outline: 1px solid white;
+
+}
+.email button{
+  flex:1;
+  padding:10px ;
+  font-size: 1.7rem;
+}
