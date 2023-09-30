@@ -8,7 +8,21 @@
 }
 
 :root {
-  --mainColor: #10ac84;
+  --mainColor: #486568;
+  --computer:#e84118;
+  --user:#40739e;
+}
+
+body{
+  background:var(--mainColor);
+  color:white;
+}
+
+.resultdiv{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .grid{
@@ -31,8 +45,14 @@
   justify-content: space-between;
 }
 
-.counter h1{
+.counter span{
+  font-size: 3rem;
+  text-shadow: 2px 1px 2px var(--computer);
+}
+
+.counter .userresult , .counter .computerresult{
   text-align: center;
+  text-shadow: 2px 1px 2px var(--computer);
 }
 
 .main {
@@ -51,4 +71,22 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+button{
+  cursor:pointer;
+  padding:10px 15px;
+  border-radius: 5px;
+  border:hidden;
+  font-size: 1.4rem;
+  box-shadow: 2px 1px 2px var(--computer);
+  color:var(--mainColor);
+}
+
+button:active{
+  transform: scale(.9);
+}
+
+.result,.computer{
+  text-shadow: 2px 1px 2px var(--user);
 }

@@ -14,22 +14,29 @@
   <body>
     <h1 class="mainheading">Welcome to Rock Paper Scissors Game..!</h1>
     <div class="grid">
-
       <div class="counter">
-        <div>User <h1 class="userresult">0</h1> </div>
-        <div>Computer <h1 class="computerresult">0</h1> </div>
+        <div>
+          <span class="material-symbols-outlined"> person_4 </span>
+          <h1 class="userresult">0</h1>
+        </div>
+        <div>
+          <span class="material-symbols-outlined"> computer </span>
+          <h1 class="computerresult">0</h1>
+        </div>
       </div>
     </div>
     <div class="main">
       <div class="content">
-        <h1 class="computer">Computre</h1>
-        <h1 class="result">This is Dummy Result</h1>
+        <h1 class="result">Result's Here...</h1>
         <div class="optiondiv">
           <button class="btn" data-value="rock">Rock</button>
           <button class="btn" data-value="paper">Paper</button>
           <button class="btn" data-value="scissors">Scissors</button>
         </div>
-        <h1 class="choice">Your Choice</h1>
+        <div class="resultdiv">
+          Computer's Choice
+          <h1 class="computer"></h1>
+        </div>
       </div>
     </div>
     <script src="js.js"></script>
