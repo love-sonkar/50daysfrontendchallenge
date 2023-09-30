@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "AR One Sans", sans-serif;
+}
+
+:root {
+  --mainbgcolor: #9f4750fa;
+}
+
+body {
+  background: var(--mainbgcolor);
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100dvh;
+  gap: 2rem;
+}
+
+.number {
+  padding: 40px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  background: white;
+}
+
+.text {
+  font-size: 3rem;
+  color: var(--mainbgcolor);
+}
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  border: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--mainbgcolor);
+  background-color: white;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
