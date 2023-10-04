@@ -3,12 +3,10 @@ const btn = document.querySelector(".btn");
 
 let endnumber = 500;
 
-btn.addEventListener("click", ()=>{
-text.innerHTML = 00;
-    shownumber(1)
-
-}
-    );
+btn.addEventListener("click", () => {
+  text.innerHTML = 00;
+  shownumber(1);
+});
 
 function shownumber(num) {
   if (num == endnumber) {
@@ -23,4 +21,3 @@ function shownumber(num) {
 }
 
 shownumber(1);
-

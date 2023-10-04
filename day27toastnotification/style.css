@@ -50,20 +50,25 @@ button {
 }
 
 .cover {
+  width: max-content;
   padding: 10px 15px;
   background-color: white;
   border-radius: 5px;
   text-align: center;
   font-size: 1.2rem;
-  animation: scale .3s ease-in-out;
+  animation: scale 0.3s ease-in-out;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 @keyframes scale {
-  from{
-    scale: 0;
-  }to{
-    scale: 1;
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
 
