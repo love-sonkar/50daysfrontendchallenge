@@ -32,7 +32,7 @@ body {
 
 .marqueediv .item {
   flex-shrink: 0;
-  animation: marqueeani 60s 1s forwards linear infinite;
+  animation: marqueeani 20s 1s forwards linear infinite;
 }
 
 .marqueediv .item h2 {

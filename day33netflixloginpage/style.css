@@ -14,7 +14,7 @@
 
 
 .main{
-  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("/bg.jpg") ;
+  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("/bg.jpg") ;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100dvh;
@@ -54,16 +54,23 @@ button:hover{
 }
 
 .herosection{
-  display:grid;
-  place-content: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 80%;
   color:white;
   gap:1rem;
 }
 
+.herosection h2{
+  font-size: 2rem;
+}
+
 .email{
   display: flex;
   gap: 1rem;
+  max-width: max-content;
 }
 
 .email input{
@@ -72,7 +79,7 @@ button:hover{
   border-radius: 5px;
   border:1px solid rgb(155, 155, 155);
   padding:10px;
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
 
 .email input:checked
@@ -83,5 +90,5 @@ button:hover{
 .email button{
   flex:1;
   padding:10px ;
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
