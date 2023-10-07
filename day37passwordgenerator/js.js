@@ -1,6 +1,23 @@
 const btn = document.querySelector(".btn");
 const showpass = document.querySelector(".showpass");
 const number = document.querySelector(".number");
+const range = document.querySelector(".range");
+const labelrange = document.querySelector(".labelrange");
+
+
+let passlength = 5;
+
+range.addEventListener("click",(e)=>{
+    passlength = e.target.value
+    PasswordGenerator()
+    lebelrangeText()
+})
+
+function lebelrangeText (){
+    labelrange.innerHTML = passlength;
+}
+
+lebelrangeText()
 
 btn.addEventListener("click", PasswordGenerator);
 
@@ -14,7 +31,7 @@ function PasswordGenerator() {
   }
 
   genpass += alphabets;
-  for (let i = 0; i <= 7; i++) {
+  for (let i = 1; i <= passlength; i++) {
     let randomenumber = Math.floor(Math.random() * genpass.length);
     orignalPss += genpass.charAt(randomenumber);
   }
@@ -34,3 +51,6 @@ number.addEventListener("click", () => {
 function NumberTrueFalseCheck() {
   return number.getAttribute("data-number");
 }
+
+
+PasswordGenerator()
