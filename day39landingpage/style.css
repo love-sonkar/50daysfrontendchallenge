@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+
+:root {
+  --mainwhitecolor: #ffffff;
+  --mainblack: #000000;
+  --maxwidth: 1200px;
+}
+
+.max {
+  margin: 0 auto;
+  max-width: var(--maxwidth);
+}
+
+li,
+button {
+  cursor: pointer;
+}
+
+button {
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  color: var(--mainblack);
+  background: var(--mainwhitecolor);
+  transition: 0.3s ease-in-out;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+}
+button:hover {
+  color: var(--mainwhitecolor);
+  background: var(--mainblack);
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 95%;
+  max-width: var(--maxwidth);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  background: rgb(255 255 255 / 26%);
+  border-radius: 50px;
+  color: var(--mainwhitecolor);
+}
+
+.logo {
+  font-size: 1.3rem;
+  padding: 0 10px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.9rem;
+  list-style: none;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--mainwhitecolor);
+  border-color: transparent;
+}
+
+nav ul li:hover {
+  color: var(--mainwhitecolor);
+
+  border-bottom: 2px solid var(--mainwhitecolor);
+}
+
+.activelink {
+  color: var(--mainwhitecolor);
+  border-bottom: 2px solid var(--mainwhitecolor);
+}
+
+.maincontainer {
+  height: 100dvh;
+  background:linear-gradient(to right,rgba(0,0,0,.4),rgba(0,0,0,0.4)), url("./bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homecontainer {
+  height: 100%;
+  display: flex;
+}
+
+.content {
+  flex: 0.5;
+  display: grid;
+  place-content: center;
+  padding: 0 30px;
+  gap: 1rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color:white;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex: 1;
+  }
+}
