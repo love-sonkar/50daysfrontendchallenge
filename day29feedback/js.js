@@ -18,7 +18,7 @@ innderDivs.forEach((item) => {
         footer.innerText = "why you choose this";
         break;
       case "Bad":
-        footer.innerText = "you choose bad";
+        footer.innerText = "Why Bad can you suggest me somthing to improve";
     }
   });
 });
