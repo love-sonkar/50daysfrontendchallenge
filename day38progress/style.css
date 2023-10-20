@@ -8,8 +8,8 @@
 }
 
 :root {
-  --mainbgcolor: #939393;
-  --color:rgb(34, 231, 238);
+  --mainbgcolor: #464646;
+  --color: rgb(34, 231, 238);
 }
 
 .main {
@@ -46,9 +46,9 @@
   border-radius: 150px;
   padding: 5px 10px;
   position: relative;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   border: 2px solid transparent;
-  color:var(--color);
+  color: var(--color);
   background-color: var(--mainbgcolor);
 }
 
@@ -74,10 +74,10 @@ button {
   border: hidden;
 }
 
-button:active{
+button:active {
   transform: scale(0.9);
 }
 
-.active{
+.active {
   border-color: var(--color);
 }
