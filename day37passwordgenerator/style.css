@@ -201,3 +201,40 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -7px;
 }
 
+/* // toast notification  */
+
+.toastHandler{
+  position: absolute;
+  top: 10px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.toastNoti{
+
+  margin:0 auto;
+  border:1px solid var(--secondary);
+  background:white;
+  padding:var(--padding);
+  border-radius: 5px;
+  animation: transformAnimate .3s ease-in-out;
+}
+
+@keyframes transformAnimate {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.toastNoti h2{
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+.toastNoti p{
+  font-size: .9rem;
+}

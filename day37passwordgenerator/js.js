@@ -9,6 +9,22 @@ const number = document.querySelector("#number");
 const capital = document.querySelector("#capitalLetter")
 const special = document.querySelector("#specialLetter")
 
+const CopyBtn = document.querySelector(".copy");
+CopyBtn.addEventListener("click",()=>{
+navigator.clipboard.writeText(showpass.value);
+const MainContainer = document.querySelector(".toastHandler");
+const ToastDiv = document.createElement("div");
+ToastDiv.classList.add("toastNoti");
+ToastDiv.innerHTML = `<h2>You Copied</h2>
+<p style="font-size:1.2rem;">${showpass.value}</p>`
+
+MainContainer.append(ToastDiv);
+
+setTimeout(() => {
+  ToastDiv.remove();
+}, 1500);
+
+})
 
 let passlength = 5;
 
