@@ -8,7 +8,8 @@
 }
 
 :root {
-  --mainbgcolor: #f0f0f0;
+  --mainbgcolor: #a3a3a3;
+  --padding:10px; 
 }
 
 .main {
@@ -22,14 +23,54 @@
 }
 
 .card{
-  width: 60%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+width: 30%;
+background:white;
 }
 
-label{
-  user-select: none;
+.card .cardHead{
+background-color: red;
+color:white;
+}
+
+.cardHead h2{
+  padding: var(--padding);
+  font-size: 1rem;
+}
+
+.cardBody{
+  padding: var(--padding);
+}
+
+.content h2{
+  padding: var(--padding) 0;
+}
+
+.inputcontent{
+  display: flex;
+  border: 1px solid blue;
+  padding:3px;
+  margin:10px 0px;
+  gap: 10px;
+}
+
+.inputcontent input{
+width: 100%;
+  outline: none;
+  border: hidden;
+  font-size: 1.3rem;
+}
+
+.inputcontent button{
+  cursor: pointer;
+  padding: var(--padding) 15px;
+  background-color: blue;
+  color:white;
+  outline: none;
+  border: hidden;
+}
+
+@media (max-width:768px) {
+  .card{
+    width: 60%;
+  }
 }

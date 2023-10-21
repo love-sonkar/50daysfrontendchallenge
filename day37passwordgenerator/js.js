@@ -35,7 +35,7 @@ function PasswordGenerator() {
     let randomenumber = Math.floor(Math.random() * genpass.length);
     orignalPss += genpass.charAt(randomenumber);
   }
-  showpass.innerHTML = orignalPss;
+  showpass.setAttribute("value",orignalPss)
   genpass = "";
 }
 
