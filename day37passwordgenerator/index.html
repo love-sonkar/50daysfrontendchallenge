@@ -19,34 +19,59 @@
         </div>
         <div class="cardBody">
           <div class="content">
-            <h2>Hii Generate your password</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum architecto inventore obcaecati nobis soluta.</p>
+            <h2>Hii <br/> Generate your password</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
           </div>
           <div class="inputcontent">
-            <input type="text" class="showpass" readonly>
-            <button class="btn">icon</button>
+            <input type="text" class="showpass" readonly />
+            <span class="material-symbols-outlined reset">
+              sync
+              </span>
+            <button class="copy">Copy</button>
           </div>
           <div class="bodycontent">
             <div class="rangediv">
-
-              <input type="range" name="range" min="5" max="20" value="5" class="range" >
-              <label for="range" class="labelrange"></label>
+              <h2>Password Length</h2>
+              <div class="inputRange">
+                <input
+                  type="range"
+                  name="range"
+                  min="5"
+                  max="15"
+                  value="5"
+                  class="range"
+                />
+                <label for="range" class="labelrange"></label>
+              </div>
             </div>
             <div class="numberdiv">
-        <button data-number="false" class="number">Numbers</button>
-
+              <h2>Use Numbers</h2>
+              <div class="toggle checkToggle" data-number="false" id="number">
+                <div class="innerbtn">
+                </div>
+              </div>
+            </div>
+            <div class="useCapital">
+              <h2>Use Capital</h2>
+              <div class="toggle checkToggle" data-number="false" id="capitalLetter" >
+                <div class="innerbtn">
+                </div>
+              </div>
+            </div>
+            <div class="usespecial">
+              <h2>Use Special Character</h2>
+              <div class="toggle checkToggle" data-number="false" id="specialLetter" >
+                <div class="innerbtn">
+                </div>
+              </div>
             </div>
           </div>
+          <button class="btn">Generate 
+          </button>
         </div>
       </div>
-      <!-- <div class="card">
-        <h2 class="showpass"></h2>
-        <button data-number="false" class="number">Numbers</button>
-        <input type="range" name="range" min="5" max="20" value="5" class="range" >
-        <label for="range" class="labelrange"></label>
-        <span class="material-symbols-outlined"> search </span> 
-        <button class="btn">Generator</button>
-      </div> -->
     </div>
     <script src="js.js"></script>
   </body>

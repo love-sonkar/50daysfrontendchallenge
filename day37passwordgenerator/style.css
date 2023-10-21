@@ -9,7 +9,9 @@
 
 :root {
   --mainbgcolor: #a3a3a3;
-  --padding:10px; 
+  --padding: 10px;
+  --borderBottom: 3px solid rgb(228, 228, 228);
+  --secondary:#1e70db;
 }
 
 .main {
@@ -22,55 +24,146 @@
   gap: 2rem;
 }
 
-.card{
-width: 30%;
-background:white;
+.card {
+  width: 30%;
+  background: white;
 }
 
-.card .cardHead{
-background-color: red;
-color:white;
+.card .cardHead {
+  background-color: var(--secondary);
+  color: white;
 }
 
-.cardHead h2{
+.cardHead h2 {
   padding: var(--padding);
   font-size: 1rem;
 }
 
-.cardBody{
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: var(--padding);
 }
 
-.content h2{
+.content h2 {
   padding: var(--padding) 0;
 }
 
-.inputcontent{
+.inputcontent {
   display: flex;
-  border: 1px solid blue;
-  padding:3px;
-  margin:10px 0px;
+  align-items: center;
+  border: 1px solid var(--secondary);
+  padding: 3px;
+  margin: 10px 0px;
   gap: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 3px;
 }
 
-.inputcontent input{
-width: 100%;
+.reset{
+  cursor: pointer;
+  font-size: 1.3rem;
+  user-select: none;
+}
+
+.copy{
+  border-radius: 3px;
+}
+.copy:active,.btn:active{
+transform: scale(.95);
+}
+
+.inputcontent input {
+  width: 100%;
   outline: none;
   border: hidden;
   font-size: 1.3rem;
 }
 
-.inputcontent button{
+.rangediv {
+  padding: var(--padding) 0;
+  border-bottom: var(--borderBottom);
+}
+
+.rangediv h2 {
+  font-size: 1rem;
+  padding: 5px 0;
+}
+
+.inputRange {
+  display: flex;
+  gap: 1rem;
+}
+
+.inputRange input {
+  width: 100%;
+}
+
+.numberdiv,
+.useCapital,
+.usespecial {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: var(--borderBottom);
+  gap: 1rem;
+}
+
+.bodycontent h2 {
+  font-size: 1rem;
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding);
   cursor: pointer;
-  padding: var(--padding) 15px;
-  background-color: blue;
-  color:white;
+  background-color: var(--secondary);
+  color: white;
   outline: none;
   border: hidden;
 }
 
-@media (max-width:768px) {
-  .card{
-    width: 60%;
+
+button{
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: white;
+  outline: none;
+  border: hidden;
+  padding: var(--padding);
+
+}
+
+/* Toggle  */
+
+.toggle {
+  height: 15px;
+  width: 45px;
+  border: 1px solid var(--secondary);
+  position: relative;
+  cursor: pointer;
+}
+
+.innerbtn {
+  height: 14px;
+  width: 15px;
+  background-color: var(--secondary);
+  position: absolute;
+  transform: translateX(0);
+  transition: 0.3s ease-in;
+  box-shadow: #1e70db40 0px 54px 55px, #1e70db1f 0px -12px 30px, #1e70db1f 0px 4px 6px, #1e70db2b 0px 12px 13px, #1e70db17 0px -3px 5px;
+}
+
+.trueToggle {
+  transform: translateX(188%);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
   }
 }
