@@ -48,7 +48,7 @@ function PasswordGenerator() {
   let orignalPss = "";
   let alphabets = "abcdefghijklmnopqrstuvwxyz";
   let CapitalLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let SpecialChar = "$#@!%^*()_~``{}><"
+  let SpecialChar = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
   let numbers = "0123456789";
   let genpass = "";
   if (number.getAttribute("data-number") == "true") {
