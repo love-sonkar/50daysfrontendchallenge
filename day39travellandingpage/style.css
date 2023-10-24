@@ -87,9 +87,13 @@ nav ul li:hover {
   border-bottom: 2px solid var(--mainwhitecolor);
 }
 
+.ham{
+  display: none;
+}
+
 .maincontainer {
   height: 100dvh;
-  background:linear-gradient(to right,rgba(0,0,0,.4),rgba(0,0,0,0.4)), url("./bg.webp");
+  background:linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,0.6)), url("./bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -117,7 +121,22 @@ nav ul li:hover {
   color:white;
 }
 
+.content .btn{
+  width: min-content;
+}
+
 @media (max-width: 768px) {
+  /* header  */
+
+  nav{
+    display: none;
+  }
+
+  .ham{
+    display: block;
+  }
+
+
   .content {
     flex: 1;
   }
