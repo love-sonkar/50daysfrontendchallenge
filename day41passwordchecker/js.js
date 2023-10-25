@@ -1,16 +1,22 @@
-console.log("hi")
-const Imge=document.querySelector(".bgImg");
-const btn=document.querySelector(".btn");
-const btn2=document.querySelector(".btn2");
+const Imge = document.querySelector(".bgImg");
+const input = document.querySelector(".inputval");
+const pass = document.querySelector(".pass");
 
+input.focus();
 
-btn.addEventListener("click",()=>{
+input.addEventListener("input", (e) => {
+  const value = e.target.value;
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let number = "1234567890";
+  pass.innerHTML = "Weak";
 
-  Imge.style.filter = "blur(0)";
-})
-
-
-btn2.addEventListener("click",()=>{
-
-  Imge.style.filter = "blur(100px)";
-})
+  for (let i = 0; i < value.length; i++) {
+    if (alphabet.includes(value[i])) {
+      pass.innerHTML = "Medium";
+    } else if (number.includes(value[i])) {
+      if (value.includes(alphabet)) {
+        pass.innerHTML = "Strong";
+      }
+    }
+  }
+});
