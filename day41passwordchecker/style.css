@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --heartColor: red;
+  }
+
+  .main {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  .bgImg{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width:100%;
+    filter:blur(100px);
+    transition: .3s ease-in-out;
+  }
