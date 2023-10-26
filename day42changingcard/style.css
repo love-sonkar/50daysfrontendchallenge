@@ -54,15 +54,24 @@ body {
  }
 }
 
+.card-body{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
 .textcontent{
+  position: relative;
   font-size: 1.4rem;
 }
 
 .textcontent::after {
   content: "''";
   font-size: 3rem;
-  margin: 0 2px;
+  margin: 8px 3px;
   color: var(--mainbgcolor);
+  position: fixed;
 }
 
 .textcontent::before {
@@ -70,6 +79,7 @@ body {
   font-size: 3rem;
   margin: 0 2px;
   color: var(--mainbgcolor);
+
 }
 
 
