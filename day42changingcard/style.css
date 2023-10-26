@@ -8,7 +8,7 @@
 }
 
 :root {
-  --mainbgcolor: #00b894;
+  --mainbgcolor: #51756e;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
   background: white;
   border-radius: 5px;
   padding: 20px;
-  width: 60%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +82,16 @@ body {
 
 }
 
+.card-body p{
+  font-size: 1.1rem;
+}
+
+.author{
+  font-weight: bold;
+  padding-bottom: 8px;
+  color: var(--mainbgcolor);
+  border-bottom: 3px solid var(--mainbgcolor);
+}
 
 @media (max-width: 768px) {
   .card {
