@@ -48,7 +48,7 @@ span {
   height: 10px;
   width: 10px;
   animation: ani 0.3s ease-in;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 @keyframes ani {
