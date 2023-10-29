@@ -11,6 +11,10 @@
   --mainbgcolor: #51756e;
 }
 
+body{
+  background-color: var(--mainbgcolor);
+}
+
 img{
   object-fit: cover;
   width: 100%;
@@ -31,6 +35,7 @@ img{
 
 .left img,.right img{
 height: 100%;
+
 }
 
 .center{
@@ -40,6 +45,7 @@ height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .down{
@@ -75,8 +81,11 @@ button{
 
 @keyframes upanimation {
   from{
+    opacity: 1;
     transform: translateY(0);
   }to{
+    opacity: 0;
+
     transform: translateY(-100%);
   }
 }
@@ -84,8 +93,12 @@ button{
 
 @keyframes downanimation {
   from{
+    opacity: 1;
+
     transform: translateY(0);
   }to{
+    opacity: 0;
+
     transform: translateY(100%);
   }
 }
