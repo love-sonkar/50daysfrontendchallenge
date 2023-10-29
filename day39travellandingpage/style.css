@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Mooli", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -18,9 +19,19 @@
   max-width: var(--maxwidth);
 }
 
+a{
+  text-decoration: none;
+}
+
 li,
 button {
   cursor: pointer;
+}
+
+img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 button {
@@ -76,6 +87,11 @@ nav ul li {
   border-color: transparent;
 }
 
+nav ul li a{
+  color: rgba(255, 255, 255, 0.76);
+
+}
+
 nav ul li:hover {
   color: var(--mainwhitecolor);
 
@@ -125,19 +141,89 @@ nav ul li:hover {
   width: min-content;
 }
 
+.sections{
+  padding:.625rem 1.25rem;
+}
+
+.sections .heading{
+  text-align: center;
+  padding-bottom: 1.25rem;
+}
+
+.about{
+  padding: 30px 0;
+  background-color: #ebebeb;
+}
+.about__content{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about__content img{
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.text__content h2,.text__content p{
+  color: #000000;
+}
+
+.text__content h2{
+  padding-bottom: .625rem;
+}
+
+/* // travel section  */
+
+.travel{
+  background-color: #ffffff;
+}
+
 @media (max-width: 768px) {
   /* header  */
+  .headerborder{
+    border-radius:25px 25px 0 0;
+  }
 
   nav{
-    display: none;
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 48px;
+    width: 100%;
+    background: rgb(255 255 255 / 26%);
+  border-radius:0 0 25px 25px;
+  transition: .3s ease-in-out;
+  }
+  .navheight{
+    height: 315px;
+  }
+
+  nav ul{
+    flex-direction: column;
+    height: auto;
+    align-items: flex-end;
+    padding: 64px 26px 15px 0;
   }
 
   .ham{
     display: block;
+    padding-right: 10px;
   }
 
+  .ani{
+  transition: 1.1s ease-in-out;
+  }
 
   .content {
     flex: 1;
+  }
+  /* // about section  */
+  .about__content{
+    width: 100%;
   }
 }
