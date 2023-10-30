@@ -198,6 +198,7 @@ nav ul li:hover {
     background: rgb(255 255 255 / 26%);
   border-radius:0 0 25px 25px;
   transition: .3s ease-in-out;
+  backdrop-filter: blur(10px);
   }
   .navheight{
     height: 315px;
@@ -213,6 +214,7 @@ nav ul li:hover {
   .ham{
     display: block;
     padding-right: 10px;
+    cursor: pointer;
   }
 
   .ani{
