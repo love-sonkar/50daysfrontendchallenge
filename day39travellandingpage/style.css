@@ -11,6 +11,7 @@
 :root {
   --mainwhitecolor: #ffffff;
   --mainblack: #000000;
+  --secondbg:#ebebeb;
   --maxwidth: 1200px;
 }
 
@@ -94,13 +95,16 @@ nav ul li a{
 
 nav ul li:hover {
   color: var(--mainwhitecolor);
-
   border-bottom: 2px solid var(--mainwhitecolor);
 }
 
 .activelink {
   color: var(--mainwhitecolor);
   border-bottom: 2px solid var(--mainwhitecolor);
+}
+
+.activelink a{
+  color: var(--mainwhitecolor);
 }
 
 .ham{
@@ -152,7 +156,7 @@ nav ul li:hover {
 
 .about{
   padding: 30px 0;
-  background-color: #ebebeb;
+  background-color: var(--secondbg);
 }
 .about__content{
   width: 50%;
@@ -180,6 +184,17 @@ nav ul li:hover {
 
 .travel{
   background-color: #ffffff;
+}
+
+/* footer section */
+.footer{
+  padding:1.5rem .625rem;
+  background-color: var(--secondbg);
+}
+
+.footer p{
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
