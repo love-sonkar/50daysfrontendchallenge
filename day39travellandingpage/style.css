@@ -155,7 +155,7 @@ nav ul li:hover {
 }
 
 .about{
-  padding: 30px 0;
+  padding: 30px 20px;
   background-color: var(--secondbg);
 }
 .about__content{
@@ -184,6 +184,32 @@ nav ul li:hover {
 
 .travel{
   background-color: #ffffff;
+}
+
+.travel__content{
+  padding:10px;
+}
+
+.travel__col{
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 0;
+}
+
+.travel__col:nth-child(2),.travel__col:nth-child(4){
+  flex-direction: row-reverse;
+}
+
+.travel__img{
+  flex: .5;
+}
+
+.travel__img img{
+  border-radius: 10px;
+}
+
+.travel__content{
+  flex:.5;
 }
 
 /* footer section */
@@ -242,5 +268,13 @@ nav ul li:hover {
   /* // about section  */
   .about__content{
     width: 100%;
+  }
+
+  /* /travel section  */
+  .travel__col{
+    flex-direction: column;
+  }
+  .travel__col:nth-child(2),.travel__col:nth-child(4){
+    flex-direction: column;
   }
 }
