@@ -154,10 +154,12 @@ nav ul li:hover {
   padding-bottom: 1.25rem;
 }
 
+/* // about section  */
 .about{
   padding: 30px 20px;
-  background-color: var(--secondbg);
+  background-color: var(--mainwhitecolor);
 }
+
 .about__content{
   width: 50%;
   margin: 0 auto;
@@ -165,6 +167,7 @@ nav ul li:hover {
   flex-direction: column;
   gap: 2rem;
 }
+
 .about__content img{
   height: 400px;
   width: 400px;
@@ -183,10 +186,14 @@ nav ul li:hover {
 /* // travel section  */
 
 .travel{
-  background-color: #ffffff;
+  background-color: var(--secondbg);
 }
 
-.travel__content{
+.head__travel{
+  padding-top: 1.25rem;
+}
+
+.travel__content__container{
   padding:10px;
 }
 
@@ -210,6 +217,13 @@ nav ul li:hover {
 
 .travel__content{
   flex:.5;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.travel__content h2{
+  text-align: center;
 }
 
 /* footer section */
@@ -276,5 +290,15 @@ nav ul li:hover {
   }
   .travel__col:nth-child(2),.travel__col:nth-child(4){
     flex-direction: column;
+  }
+  .travel__content h2{
+    text-align: left;
+  }
+}
+
+@media (max-width:468px) {
+  .about__content img{
+    height: 250px;
+    width: 250px;
   }
 }
