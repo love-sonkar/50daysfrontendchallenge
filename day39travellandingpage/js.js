@@ -10,6 +10,15 @@ ham.addEventListener("click",()=>{
     mobilenav.classList.toggle("navheight")
 })
 
-
+// footer year
 const newDate = new Date().getFullYear();
-date.innerHTML = newDate
+date.innerHTML = newDate;
+
+// contact form 
+
+const form = document.querySelector(".contact__form");
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    alert("form submited")
+})

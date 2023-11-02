@@ -113,7 +113,7 @@ nav ul li:hover {
 
 .maincontainer {
   height: 100dvh;
-  background:linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,0.6)), url("./bg.webp");
+  background:linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,0.6)), url("https://images.pexels.com/photos/18573922/pexels-photo-18573922/free-photo-of-sand-dunes-in-desert.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -224,6 +224,44 @@ nav ul li:hover {
 
 .travel__content h2{
   text-align: center;
+}
+
+/* contact section */
+.contact .heading{
+  padding-top: 20px;
+}
+.contact__form{
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin:0 auto;
+  gap: 2rem;
+}
+
+.contact__form input,textarea{
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: var(--secondbg);
+}
+
+.contact__form textarea{
+  resize: none;
+  border-radius: 10px;
+}
+
+.form__btn{
+  background-color: var(--mainblack);
+  color: var(--mainwhitecolor);
+  border: 1px solid var(--mainblack);
+}
+
+.form__btn:hover{
+  background-color: transparent;
+  color: var(--mainblack);
 }
 
 /* footer section */
