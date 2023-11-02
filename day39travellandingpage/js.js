@@ -20,5 +20,16 @@ const form = document.querySelector(".contact__form");
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
-    alert("form submited")
+    const nameVal = e.target.elements[0].value;
+    const emailVal =e.target.elements[1].value;
+    const messageVal =e.target.elements[2].value;
+  if(!nameVal || !emailVal || !messageVal){
+    return alert("Please fill the form")
+  }
+    alert("Thankyou for Conecting us")
+    e.target.elements[0].value = ""
+    e.target.elements[1].value = ""
+    e.target.elements[2].value = ""
+
+    
 })
