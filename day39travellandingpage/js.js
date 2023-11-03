@@ -1,7 +1,7 @@
+// header section code
 const ham = document.querySelector(".ham");
 const header = document.querySelector(".header");
 const mobilenav = document.querySelector(".mobilenav");
-const date = document.querySelector(".date");
 
 ham.addEventListener("click", () => {
   header.classList.toggle("headerborder");
@@ -10,6 +10,7 @@ ham.addEventListener("click", () => {
 });
 
 // footer year
+const date = document.querySelector(".date");
 const newDate = new Date().getFullYear();
 date.innerHTML = newDate;
 
