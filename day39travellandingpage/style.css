@@ -15,6 +15,8 @@
   --maxwidth: 1200px;
 }
 
+ /* // normal styling  */
+
 .max {
   margin: 0 auto;
   max-width: var(--maxwidth);
@@ -49,6 +51,35 @@ button:hover {
   color: var(--mainwhitecolor);
   background: var(--mainblack);
 }
+
+.opposite_btn{
+  background-color: var(--mainblack);
+  color: var(--mainwhitecolor);
+  border: 1px solid var(--mainblack);
+}
+/* go to top button  */
+.go__to__top{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: -144px;
+  display: grid;
+  place-content: center;
+  transition: .3s ease-in-out;
+}
+
+.go__to__top:hover{
+  background-color: var(--mainwhitecolor);
+  color: var(--mainblack);
+}
+
+.go__to__top span{
+  font-size: 1.8rem;
+}
+
+/* // styling in header  */
 
 .header {
   position: absolute;
@@ -251,12 +282,6 @@ nav ul li:hover {
 .contact__form textarea{
   resize: none;
   border-radius: 10px;
-}
-
-.form__btn{
-  background-color: var(--mainblack);
-  color: var(--mainwhitecolor);
-  border: 1px solid var(--mainblack);
 }
 
 .form__btn:hover{
