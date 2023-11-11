@@ -25,7 +25,8 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const inputval = e.target.children[0].value;
-  if (!inputval) {
+  const inputvalTrim = inputval.trim();
+  if (!inputvalTrim) {
     return alert("add one");
   }
 const div1 = document.querySelector(".div1");
