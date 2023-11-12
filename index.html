@@ -22,7 +22,6 @@
     .body{
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       height: 100dvh;
     }
     header ,footer{
@@ -30,6 +29,9 @@
       padding: 15px 10px;
       background-color: var(--maincolor);
       color: rgb(255, 255, 255);
+    }
+    footer{
+      margin-top: auto;
     }
     .logo {
       font-size: 1.8rem;
@@ -68,6 +70,11 @@
       font-size: 1.4rem;
       color: white;
       border-radius: 0 10px 10px 0;
+    }
+    @media screen and (max-width:468px) {
+      header .logo ,footer h2,.select-button,.btn{
+      font-size: 1rem;
+    }
     }
   </style>
   <body class="body">
@@ -136,6 +143,8 @@
       btn.addEventListener("click", () => {
         window.location = `${baseUrl}${select.value}`;
       });
+      const date = new Date().getFullYear()
+      document.querySelector(".date").innerHTML = date;
     </script>
   </body>
 </html>
