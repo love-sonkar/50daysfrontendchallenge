@@ -35,7 +35,13 @@ body{
     border-radius: 0 0 50% 50%;
     position: relative;
     transition: var(--transition);
+    cursor: pointer;
 }
+
+.design{
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
 .innerdiv{
     position: absolute;
     height: 37px;
@@ -49,17 +55,34 @@ body{
 }
 
 .fire{
-    height: 50px;
-    width: 10px;
+    height: 0px;
+    width: 30px;
     border-radius: 50%;
     position: absolute;
     top: 0;
-    transform: translate(90deg);
     background-color: red;
-    left: 47%;
+    left: 40%;
+    transition: var(--transition);
+}
+.innerfire{
+    height: 0px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    background-color: rgb(255, 213, 0);
+    left: 18%;
+    transition: var(--transition);
 }
 
 .outerdiv:hover{
     height: 100px;
 }
 
+.outerdiv:hover .fire{
+    height: 100px;
+}
+
+.outerdiv:hover .innerfire{
+    height: 80px;
+}
