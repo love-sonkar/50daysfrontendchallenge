@@ -38,8 +38,49 @@ body{
     cursor: pointer;
 }
 
+.designRow{
+    display: flex;
+    position: absolute;
+    top: 10px;
+}
+
+.designRow:nth-child(1){
+    top: 33px;
+}
+.designRow:nth-child(2){
+    top: 55px;
+}
+
 .design{
+    position: absolute;
+    transition: var(--transition);
+    height: 0px;
+    background-color: green;
+    width: 24px;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.design:nth-child(1){
+    left: 24px;
+    top: 9px;
+}
+
+.design:nth-child(3){
+    left: 48px;
+    top: 15px;
+}
+
+.design:nth-child(4){
+    left: 74px;
+    top: 15px;
+}
+.design:nth-child(5){
+    left: 98px;
+    top: 9px;
+}
+.design:nth-child(6){
+    left: 122px;
+    top: 0;
 }
 
 .innerdiv{
@@ -76,7 +117,7 @@ body{
 }
 
 .outerdiv:hover{
-    height: 100px;
+    height: 110px;
 }
 
 .outerdiv:hover .fire{
@@ -85,4 +126,8 @@ body{
 
 .outerdiv:hover .innerfire{
     height: 80px;
+}
+
+.outerdiv:hover .design{
+    height: 24px;
 }
