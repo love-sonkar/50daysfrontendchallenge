@@ -11,6 +11,7 @@
 :root{
     --mainColor:#182C61;
     --secondMain:#6D214F;
+    --transition : .3s ease-in-out
 }
 
 body{
@@ -28,18 +29,37 @@ body{
 }
 
 .outerdiv{
-    height: 100px;
+    height: 28px;
     width: 150px;
     background-color: yellow;
     border-radius: 0 0 50% 50%;
     position: relative;
+    transition: var(--transition);
 }
 .innerdiv{
     position: absolute;
-    height: 100px;
-    width: 100px;
-    border-radius: 0 50%;
+    height: 37px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 50%;
+    top: -19px;
+    transform: rotate(180deg);
     background-color: darkcyan;
-    top: -40px;
-    transform: rotate(45deg);
 }
+
+.fire{
+    height: 50px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(90deg);
+    background-color: red;
+    left: 47%;
+}
+
+.outerdiv:hover{
+    height: 100px;
+}
+
