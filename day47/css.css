@@ -9,8 +9,12 @@
 }
 
 :root{
-    --mainColor:#182C61;
-    --secondMain:#6D214F;
+    --mainColor:#d9d9d9;
+    --secondMain:#d2d2d2;
+}
+
+body{
+    background-color: var(--secondMain);
 }
 
 .main{
@@ -21,6 +25,7 @@
     justify-content: center;
     align-items:center;
     flex-direction: column;
+    padding: 20px;
 }
 
 img{
@@ -29,15 +34,15 @@ img{
 }
 .card{
     max-width: 380px;
-    border: 1px solid var(--mainColor);
     border-radius: 5px;
+    background-color: white;
 }
 
 .cardheader{
     display: flex;
     gap: 10px;
     align-items: center;
-    padding: 5px 10px;
+    padding: 10px;
     border-bottom: 2px solid var(--mainColor);
     margin-bottom: 10px;
 }
@@ -74,18 +79,20 @@ img{
 .cardbody{
     margin-top: 10px;
     border-top: 2px solid var(--mainColor);
-    padding: 5px 10px;
+    padding: 10px 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 .cardbody h2{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    line-height: 1;
 }
 
 .cardbody p{
     font-size: .9rem;
+    line-height: 1.2;
     word-break: normal;
 }
 
@@ -99,6 +106,7 @@ button{
     cursor: pointer;
     transition: .3s ease-in-out;
     max-width: max-content;
+    margin-bottom: 8px;
 }
 
 button:hover{
