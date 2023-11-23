@@ -18,12 +18,22 @@ body{
 }
 
 .main{
-    max-width: 1200px;
     margin: 0 auto;
     height: 100dvh;
     display: flex;
     justify-content: center;
     align-items:center;
     flex-direction: column;
-    padding: 20px;
+}
+
+footer{
+    width: 100%;
+    background-color: orange;
+    padding: 20px 10px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
 }
