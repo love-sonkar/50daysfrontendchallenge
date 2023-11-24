@@ -92,6 +92,17 @@ nav li a{
     font-size: 1rem;
 }
 
+#portfolio{
+    background-color: pink;
+    padding: 30px 10px;
+    text-align: center;
+    color: white;
+}
+
+#profile-link{
+    color: white;
+}
+
 @media screen and (max-width: 768px) {
     #navbar {
         display: none;
