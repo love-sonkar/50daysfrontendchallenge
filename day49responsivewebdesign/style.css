@@ -34,22 +34,26 @@ a{
     color: white;
 }
 
-nav{
+.ul{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-nav li {
+.ul li {
     list-style: none;
 
 }
 
-nav li a{
+.ul li a{
     text-decoration: none;
     font-size: 1.4rem;
     color: white;
+}
+
+.ham{
+    display: none;
 }
 
 #welcome-section{
@@ -112,6 +116,15 @@ footer{
 
 @media screen and (max-width: 768px) {
     #navbar {
-        display: none;
+        display: block;
+        position: absolute;
+    background: #fcc2cb;
+    width: 100%;
+    right: 0;
+    top: 58px;
+    padding: 0 15px 20px 15px;
+    }
+    .ham{
+        display: block;
     }
 }
