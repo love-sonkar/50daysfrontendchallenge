@@ -25,9 +25,13 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-#header-img img{
+#header-img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -42,8 +46,16 @@ img{
     display: none;
 }
 
+#video {
+    height: 200px;
+    width: 200px;
+}
+
 @media (max-width: 768px) {
     .ham{
         display: block;
+    }
+    #nav-bar{
+        display: none;
     }
 }
