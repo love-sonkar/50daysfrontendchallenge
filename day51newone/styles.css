@@ -22,9 +22,31 @@ body{
     height: 100dvh;
 }
 
-#image {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display:block;
+#navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100dvh;
+    background-color: rgb(157, 157, 157);
+    padding: 20px 0;
+}
+
+#navbar header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#navbar a {
+    padding: 10px;
+    border: 1px solid green;
+    width: 100%;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 1rem;
+    }
 }
