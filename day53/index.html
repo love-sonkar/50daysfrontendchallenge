@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Year Footer</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <div class="main">
+      <footer>
+        <p>Copyright &copy; By Love Sonkar <span class="year">2023</span></p>
+      </footer>
+    </div>
+    <script>
+      const getYear = new Date().getFullYear();
+      document.querySelector(".year").innerHTML = getYear;
+    </script>
+  </body>
+</html>
