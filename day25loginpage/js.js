@@ -22,7 +22,6 @@ form.addEventListener("submit", (e) => {
   } else {
     if (usernameValue.length < 4) {
       usernameError.innerHTML = "Username Must be 4 character";
-      username.focus()
     } else {
       usernameError.innerHTML = "";
     }
@@ -53,7 +52,8 @@ form.addEventListener("submit", (e) => {
 
   if(usernameError.innerHTML === "" && passwordError.innerHTML === ""&& emailError.innerHTML === ""){
       console.log(usernameValue,emailValue,passwordValue)
-    //   e.currentTarget.submit();
+      // e.currentTarget.submit(); // for submit form
+      location.reload()
   }
 
 });
