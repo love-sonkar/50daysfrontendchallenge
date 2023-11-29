@@ -22,7 +22,7 @@
         </p>
       </div>
       <div class="right">
-        <div class="form">
+        <form class="form">
           <h2>Create Account</h2>
           <div class="icons">
             <div class="image">
@@ -41,19 +41,23 @@
               >person</label
             >
             <input type="text" id="username" placeholder="Username" />
+            <span class="usernameError"></span>
           </div>
           <div class="item">
             <label for="email" class="material-symbols-outlined"> mail</label>
             <input type="text" id="email" placeholder="Email" />
+            <span class="emailError"></span>
           </div>
           <div class="item">
             <label for="password" class="material-symbols-outlined">lock</label>
             <input type="password" id="password" placeholder="Password" />
+            <span class="passError"></span>
           </div>
 
-          <button>SING UP</button>
-        </div>
+          <button type="submit">SING UP</button>
+        </form>
       </div>
     </div>
+    <script src="js.js"></script>
   </body>
 </html>
