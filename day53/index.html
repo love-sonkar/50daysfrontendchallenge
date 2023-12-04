@@ -2,19 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Year Footer</title>
-    <link rel="stylesheet" href="css.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Page</title>
   </head>
   <body>
     <div class="main">
-      <footer>
-        <p>Copyright &copy; By Love Sonkar <span class="year">2023</span></p>
-      </footer>
+      <div class="logo">Logo</div>
+      <div class="left">
+        <h2>Welcome Back!</h2>
+        <p>
+          Enter your personal detail <br />
+          and start your journey with us
+        </p>
+      </div>
+      <div class="right">
+        <form action="/" method="POST" class="form">
+          <h2>Create Account</h2>
+          <div class="item">
+            <label for="username" class="material-symbols-outlined"
+              >person</label
+            >
+            <input type="text" id="username" placeholder="Username" />
+          </div>
+          <span class="usernameError error"></span>
+          <div class="item">
+            <label for="email" class="material-symbols-outlined"> mail</label>
+            <input type="text" id="email" placeholder="Email" />
+          </div>
+          <span class="emailError error"></span>
+          <div class="item">
+            <label for="password" class="material-symbols-outlined">lock</label>
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+          <span class="passwordError error"></span>
+
+          <button type="submit">SING UP</button>
+        </form>
+      </div>
     </div>
-    <script>
-      const getYear = new Date().getFullYear();
-      document.querySelector(".year").innerHTML = getYear;
-    </script>
+    <script src="js.js"></script>
   </body>
 </html>
