@@ -19,18 +19,19 @@
     :root {
       --maincolor: rgb(240, 236, 0);
     }
-    .body{
+    .body {
       display: flex;
       flex-direction: column;
       height: 100dvh;
     }
-    header ,footer{
+    header,
+    footer {
       text-align: center;
       padding: 15px 10px;
       background-color: var(--maincolor);
       color: rgb(255, 255, 255);
     }
-    footer{
+    footer {
       margin-top: auto;
     }
     .logo {
@@ -71,10 +72,13 @@
       color: white;
       border-radius: 0 10px 10px 0;
     }
-    @media screen and (max-width:468px) {
-      header .logo ,footer h2,.select-button,.btn{
-      font-size: 1rem;
-    }
+    @media screen and (max-width: 468px) {
+      header .logo,
+      footer h2,
+      .select-button,
+      .btn {
+        font-size: 1rem;
+      }
     }
   </style>
   <body class="body">
@@ -132,12 +136,16 @@
         <option value="/day45movieapp">Movie Card</option>
         <option value="/day46diwalispecial">Diwali Diya</option>
         <option value="/day47blogitemcard">BlogItem</option>
-	      <option value="day50final">final</option> 
-     </select>
+        <option value="day50final">final</option>
+        <option value="day51newone">new</option>
+        <option value="day52">day52</option>
+      </select>
       <button class="btn">Go</button>
     </main>
     <footer>
-      <h2>2023-<span class="date">2023</span> All Right's Reserved By Love Sonkar</h2>
+      <h2>
+        2023-<span class="date">2023</span> All Right's Reserved By Love Sonkar
+      </h2>
     </footer>
     <script>
       const btn = document.querySelector(".btn");
@@ -146,7 +154,7 @@
       btn.addEventListener("click", () => {
         window.location = `${baseUrl}${select.value}`;
       });
-      const date = new Date().getFullYear()
+      const date = new Date().getFullYear();
       document.querySelector(".date").innerHTML = date;
     </script>
   </body>
