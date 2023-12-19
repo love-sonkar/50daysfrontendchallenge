@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="css.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="main">
+      <button class="prev">prev</button>
+      <div class="imgDiv">
+        <img src="https://images.pexels.com/photos/18794028/pexels-photo-18794028/free-photo-of-woman-standing-on-a-grass-field-and-looking-at-mountains.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="slide" alt="">
+        <img src="https://images.pexels.com/photos/18578343/pexels-photo-18578343/free-photo-of-a-woman-in-a-white-dress-and-hat-walking-through-a-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="slide" alt="">
+        <img src="https://images.pexels.com/photos/9367332/pexels-photo-9367332.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="slide" alt="">
+      </div>
+      <button class="next">Next</button>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".slide");
+      let counter = 0;
+      images.forEach((item,index)=>item.style.left = `${index * 100}%`);
+
+      document.querySelector(".prev").addEventListener("click",()=>{
+        counter++;
+        if(counter > 0){
+          counter = (images.length-1)
+        }
+        console.log(counter)
+        slideFunc()
+      })
+
+      document.querySelector(".next").addEventListener("click",()=>{
+        counter--;
+        if(counter < (images.length -1)){
+          counter=0
+        }
+        slideFunc()
+      })
+
+
+      const slideFunc = ()=> images.forEach((item)=>item.style.transform = `translateX(-${counter * 100}%)`)
+    </script>
+  </body>
+</html>
