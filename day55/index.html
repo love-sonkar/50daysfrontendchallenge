@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="css.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="main">
+      <button class="prev">prev</button>
+      <div class="imgDiv">
+       
+      </div>
+      <button class="next">Next</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js">
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
+        </script>
+    <script src="./hover.js"></script>
+
+    <script>
+      const images = document.querySelectorAll(".slide");
+      const imgDiv = document.querySelector(".imgDiv");
+      const imgArr = ["anniversary.jpg","bleft.jpg","dd.jpg","men.jpg","pendent.jpg"];
+      let index = 0;
+
+     let animation1 = new hoverEffect({
+        parent: document.querySelector(".imgDiv"),
+        intensity1: 0.1,
+        intensity2: 0.1,
+        angle2: Math.PI / 2,
+        image1:`./images/${imgArr[0]}`,
+        image2:`./images/${imgArr[1]}`,
+        displacementImage:"./images/d5.jpg",
+        hover:false,
+      });
+
+      let animation2 = new hoverEffect({
+        parent: document.querySelector(".imgDiv"),
+        intensity1: 0.1,
+        intensity2: 0.1,
+        angle2: Math.PI / 2,
+        image1:`./images/${imgArr[1]}`,
+        image2:`./images/${imgArr[2]}`,
+        displacementImage:"./images/d5.jpg",
+        hover:false,
+      });
+
+      let animation3 = new hoverEffect({
+        parent: document.querySelector(".imgDiv"),
+        intensity1: 0.1,
+        intensity2: 0.1,
+        angle2: Math.PI / 2,
+        image1:`./images/${imgArr[2]}`,
+        image2:`./images/${imgArr[3]}`,
+        displacementImage:"./images/d5.jpg",
+        hover:false,
+      });
+
+      let animation4 = new hoverEffect({
+        parent: document.querySelector(".imgDiv"),
+        intensity1: 0.1,
+        intensity2: 0.1,
+        angle2: Math.PI / 2,
+        image1:`./images/${imgArr[3]}`,
+        image2:`./images/${imgArr[4]}`,
+        displacementImage:"./images/d5.jpg",
+        hover:false,
+      });
+
+      const Animearr = [
+        animation1,
+        animation2,
+        animation3,
+        animation4
+    ]
+
+    function startNextDistortAnimation() {
+    let prevIndex = index;
+    index = (index + 1) % 4;
+    Animearr[prevIndex].next();
+    setTimeout(() => {
+      let canvas = imgDiv.querySelectorAll("canvas");
+      imgDiv.appendChild(canvas[0]);
+      Animearr[prevIndex].previous();
+    }, 1200);
+  }
+
+
+  function startPrevDistortAnimation() {
+    index = index - 1 < 0 ? 3 : index - 1;
+    Animearr[index].next();
+    setTimeout(() => {
+      let canvas = imgDiv.querySelectorAll("canvas");
+      imgDiv.insertBefore(canvas[canvas.length - 1], imgDiv.firstChild);
+      Animearr[index].previous();
+    }, 500);
+  }
+
+
+  document.querySelector(".next").addEventListener("click",()=>{
+    startNextDistortAnimation()
+  })
+
+  
+  document.querySelector(".prev").addEventListener("click",()=>{
+    startPrevDistortAnimation()
+  })
+
+
+
+    </script>
+  </body>
+</html>
