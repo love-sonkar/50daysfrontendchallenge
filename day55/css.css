@@ -30,13 +30,22 @@ body{
     overflow: hidden;
     aspect-ratio: 16/9;
     position: relative;
+    border-radius: 5px;
+    display: flex;
     
 }
 
-.imgDiv img{
-    position: absolute;
-   object-fit: contain;
-   width: 100%;
-   transition: .3s ease-in-out;
+button{
+padding: 8px 15px;
+border-radius: 5px;
+outline: none;
+user-select: none;
+cursor: pointer;
+background-color: rgb(0, 204, 255);
+color: white;
+border: none;
+}
 
+button:active{
+    transform: scale(.9);
 }
